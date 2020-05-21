@@ -50,18 +50,25 @@
       <div>
       <form method="POST" action="/test">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+          <label for="exampleInputPassword1">Team</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="team">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       </div>
-
+      <div>
+        <h1>Registered users</h1>
+        <% user.forEach((indUser)=>{ %>
+          <p>Name :<%= indUser.name %></p>
+          <p>Team :<%= indUser.team %></p>
+        <% })%>
+        
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
